@@ -1,0 +1,25 @@
+
+<div class="row">
+  <div class="col-xs-12">
+    <form (ngSubmit)="onsendMessage(messageForm)" #messageForm="ngForm">
+        <div class="row">
+            <div class="col-sm-5 form-group">
+              <label for="from">From</label>
+              <input type="text" id="from" class="form-control" name="from" [(ngModel)]="from">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 form-group">
+              <label for="messageContent">Message</label>
+              <textarea id="messageContent" name="messageContent" class="form-control" rows="4" cols="50" [(ngModel)] = "messageContent"></textarea>
+            </div>
+      </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <button class="btn btn-success" type="submit">Send message</button>
+          </div>
+        </div>
+    </form>
+  </div>
+</div>
+<app-child></app-child>
